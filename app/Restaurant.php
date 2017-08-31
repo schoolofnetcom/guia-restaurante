@@ -16,4 +16,9 @@ class Restaurant extends Model
         else
             return null;
     }
+
+    public function address()
+    {
+        return $this->hasOne(\App\Address::class);
+    }
 }
