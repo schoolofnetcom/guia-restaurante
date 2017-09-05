@@ -40,4 +40,12 @@ class RestaurantsController extends Controller
         $restaurant->address()->save($address);
         return response()->json($address);
     }
+
+    public function upload(Request $request, $id)
+    {
+        $result = $this->model->findOrFail($id);
+        $data['photo'] = $request->file('photo');
+        $result->update($data);
+        return response()->json($result);
+    }
 }
