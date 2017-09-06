@@ -35,4 +35,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         return $this->hasOne('App\Restaurant');
     }
+
+    public function oauthAccessToken()
+    {
+        return $this->hasMany('\App\OauthAccessToken');
+    }
 }

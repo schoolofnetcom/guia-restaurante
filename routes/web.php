@@ -40,4 +40,7 @@ $app->group(['prefix' => 'api/v1', 'namespace' => 'Api\V1', 'middleware'=>['auth
     $app->delete('dishes/{id:[0-9]+}', "DishesController@destroy");
 
     $app->get('auth/me', 'AuthController@me');
+    $app->post('auth/change-password', 'AuthController@changePassword');
+    $app->post('auth/edit-profile', 'AuthController@ediProfile');
+    $app->get('auth/logout', 'AuthController@logout');
 });
