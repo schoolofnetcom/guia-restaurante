@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bde29d537c08fd07ca24eed6e64bc978",
+    "content-hash": "8d4760ba2a0ef9178f0b69461734b986",
     "packages": [
+        {
+            "name": "anthonymartin/geo-location",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anthonymartin/GeoLocation.php.git",
+                "reference": "50bf026f069296dfae11aa195d987854b2e75855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anthonymartin/GeoLocation.php/zipball/50bf026f069296dfae11aa195d987854b2e75855",
+                "reference": "50bf026f069296dfae11aa195d987854b2e75855",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "class",
+            "autoload": {
+                "psr-0": {
+                    "AnthonyMartin": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC 3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Martin",
+                    "email": "anthony@replaycreative.com",
+                    "homepage": "http://replaycreative.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Retrieve bounding coordinates, distances, longitude and latitude with GeoLocation.class.php",
+            "homepage": "https://github.com/anthonymartin/GeoLocation.php",
+            "keywords": [
+                "bounding coordinates",
+                "distances",
+                "geocoding",
+                "geolocation"
+            ],
+            "time": "2016-09-17T18:05:14+00:00"
+        },
         {
             "name": "aws/aws-sdk-php",
             "version": "3.32.6",

@@ -10,7 +10,8 @@
         "vlucas/phpdotenv": "~2.2",
         "league/flysystem-aws-s3-v3": "^1.0",
         "dusterio/lumen-passport": "^0.2.0",
-        "barryvdh/laravel-cors": "^0.9.2"
+        "barryvdh/laravel-cors": "^0.9.2",
+        "anthonymartin/geo-location": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
