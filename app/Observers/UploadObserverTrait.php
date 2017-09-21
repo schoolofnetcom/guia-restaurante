@@ -10,7 +10,7 @@ trait UploadObserverTrait
     protected function sendFile($model)
     {
         $field = $this->field;
-        if ($model->$field->isValid()) {
+        if (is_a($model->$field, UploadedFile::class) and $model->$field->isValid()) {
             $this->upload($model);
         }
     }
