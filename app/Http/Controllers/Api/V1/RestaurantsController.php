@@ -29,6 +29,17 @@ class RestaurantsController extends Controller
         $this->model = $model;
     }
 
+    public function store(Request $request)
+    {
+        $this->validate($request, $this->rules ?? [], $this->messages ?? []);
+
+        $data = $request->all();
+        $data['user_id'] = $request->user()->id;
+        
+        $result = $this->model->create($data);
+        return response()->json($result);
+    }
+
     public function address(Request $request, $id)
     {
         $restaurant = $this->model->findOrFail($id);
