@@ -31,6 +31,8 @@ class RestaurantsController extends Controller
 
     public function store(Request $request)
     {
+        $this->authorize('create', Restaurant::class);
+
         $this->validate($request, $this->rules ?? [], $this->messages ?? []);
 
         $data = $request->all();

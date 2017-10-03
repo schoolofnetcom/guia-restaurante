@@ -27,7 +27,11 @@ class VotesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, $this->rules ?? [], $this->messages ?? []);
-        $result = $this->model->create($request->all());
+        $data = $request->all();
+        if ($request->user()) {
+            $data['user_id'] = $request->user()->id;
+        }
+        $result = $this->model->create($data);
         return response()->json($result);
     }
 }

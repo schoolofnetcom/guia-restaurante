@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d4760ba2a0ef9178f0b69461734b986",
+    "content-hash": "9f012833b1e53006e6f9f03bab93ff3a",
     "packages": [
         {
             "name": "anthonymartin/geo-location",
