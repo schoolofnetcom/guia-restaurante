@@ -41,12 +41,10 @@ class AuthController extends Controller
         $user = User::where('id', $request->user()->id)
             ->with(['restaurant'])
             ->first();
-        
-        $data = [
-            'password' => $request->input('password')
-        ];
 
-        $user->update($data);
+        $user->password = app('hash')->make($request->get('password'));
+        $user->save();
+
         return response()->json($user);
     }
 
